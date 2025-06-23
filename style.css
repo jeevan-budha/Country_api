@@ -7,6 +7,10 @@ body{
   margin: 0;
   font-family: Nuito, sans-serif;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+}
 .header{
    box-shadow: 0 2px 4px 0px rgb(0, 0,0,0.1);
 }
@@ -22,4 +26,43 @@ body{
 
 #title{
   font-weight: 800;
+}
+main{
+  padding: 24px;
+}
+.countries-container{
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-top: 16px;
+  display: flex;
+  gap:64px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.country-card{
+  display: inline-block;
+  width:250px;
+  border-radius: 5px;
+  padding-bottom: 24px;
+  box-shadow: 0 0px 10px 0 rgba(0,0,0,0.2);
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.country-card:hover{
+  transform: scale(1.02);
+  box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+}
+.country-card img{
+  width: 100%;
+}
+
+.card-text{
+  padding-inline: 16px;
+}
+.card-text h3{
+  font-size:22px;
+  margin-block: 16px;
+}
+.card-text p{
+  margin-block:10px;
 }
