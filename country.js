@@ -12,6 +12,7 @@ let captial =document.querySelector(".captial");
 let topLevelDomain =document.querySelector(".topleveldomain");
 let currencies =document.querySelector(".currencies");
 let language =document.querySelector(".language");
+let borderCountries =document.querySelector(".border-countires");
 
 fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`).then((res)=>res.json())
 .then(([country])=>{
@@ -49,6 +50,20 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`).then((
     language.innerText="No language found"; 
   }
   
+  if(country.borders){
+    country.borders.forEach((border) => {
+      fetch(`https://restcountries.com/v3.1/alpha/${border}`)
+      .then((res)=>res.json())
+      .then(([borderCountry])=>{
+        console.log(borderCountry);
+        const borderCountryTag = document.createElement('a');
+        borderCountryTag.innerText = borderCountry.name.common;
+        borderCountryTag.href=`country.html?name=${borderCountry.name.common}`
+        console.log(borderCountryTag);
+        borderCountries.append(borderCountryTag);
+      })
+    });
+  }
 
 
 })
