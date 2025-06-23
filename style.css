@@ -66,3 +66,15 @@ main{
 .card-text p{
   margin-block:10px;
 }
+
+@media (max-width:768px) {
+  .countries-container{
+    justify-content: center;
+  }
+  #title{
+  font-size:16px;
+}
+.header-content p{
+  font-size: 12px;
+}
+}
