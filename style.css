@@ -5,8 +5,21 @@
 }
 
 body {
+  --background-color:white;
+  --text-color:black;
+  --element-color:white;
   margin: 0;
   font-family: Nuito, sans-serif;
+  background-color: var(--background-color);
+  color:var(--text-color);
+  
+}
+
+body.dark{
+  --background-color: hsl(207, 26%, 17%);
+  --element-color:hsl(209, 23%, 22%);
+  --text-color:white;
+
 }
 
 a {
@@ -16,6 +29,7 @@ a {
 
 .header {
   box-shadow: 0 2px 4px 0px rgb(0, 0, 0, 0.1);
+  background-color: var(--element-color);
 }
 
 .header-content {
@@ -53,6 +67,7 @@ main {
   box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: all 0.2s ease-in-out;
+  background-color: var(--element-color);
 }
 
 .country-card:hover {
@@ -96,6 +111,8 @@ main {
   padding-left: 20px;
   color: #999;
   overflow: hidden;
+ background-color:var(--element-color);
+  color:var(--text-color);
 }
 
 .search-container input {
@@ -104,6 +121,8 @@ main {
   padding: 14px 10px;
   width: 80%;
   font-size: 16px;
+   background-color:var(--element-color);
+  color:var(--text-color);
 
 
 }
@@ -119,6 +138,8 @@ main {
   outline: none;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  background-color:var(--element-color);
+  color:var(--text-color);
 
 }
 
